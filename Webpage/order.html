@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!-- Yates | Due: June 28, 2026 | Assignment 3 -->
+<!-- Green Status ; https://validator.w3.org/ -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Yates: Assign 3</title>
+    <link rel="stylesheet" href="amuse_styles.css">
+</head>
+
+<body>
+<div id="wrapper">
+
+<header> <!-- Header; tagline -->
+    <img src="../reference-Files/sunset_site_logo.svg" alt="Six Flags Over Texas logo">
+    <h1>"The Thrill Capital of Texas, from Dawn to Dusk!"</h1>
+</header>
+
+<nav> <!-- Navigation -->
+    <a href="index.html">Home</a>
+    <a href="rides.html">Rides</a>
+    <a href="info.html">Info</a>
+    <a href="order.html">Order</a>
+    <a href="index.html#upcoming-events">Upcoming Events</a>
+    <a href="index.html#related-park-news">Related Park News</a>
+</nav>
+
+<main> <!-- Main content -->
+    <h2 class="order-heading">Order Tickets</h2>
+
+    <form action="formProcessor.html" method="get">
+
+        <fieldset> <!-- Personal Information -->
+            <legend>Personal Information</legend>
+            <p>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+            </p>
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </p>
+            <p>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone">
+            </p>
+            <p>
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="1" max="100">
+            </p>
+        </fieldset>
+
+        <fieldset> <!-- Ticket Options -->
+            <legend>Ticket Options</legend>
+            <p>
+                <label for="num-tickets">Number of Tickets:</label>
+                <select id="num-tickets" name="num-tickets">
+                    <option value="" label="Select">Select</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                </select>
+            </p>
+            <p>
+                <label for="donation">How much do you want to donate to the park?</label>
+                <input type="range" id="donation" name="donation" min="1" max="100" step="3"
+                   oninput="document.getElementById('donation-display').value = this.value">
+                $<output id="donation-display">1</output>
+            </p>
+            <p>Order Add-ons:</p>
+            <p>
+                <input type="checkbox" id="fastpass" name="fastpass" value="fastpass" checked>
+                <label for="fastpass">Fast Pass (Skip the Line)</label>
+            </p>
+            <p>
+                <input type="checkbox" id="parking" name="parking" value="parking" checked>
+                <label for="parking">Premium Parking Pass</label>
+            </p>
+            <p>
+                <input type="checkbox" id="meal-plan" name="meal-plan" value="meal-plan">
+                <label for="meal-plan">All-Day Meal Plan</label>
+            </p>
+            <p>
+                <input type="checkbox" id="photo-pass" name="photo-pass" value="photo-pass">
+                <label for="photo-pass">Photo Pass (Unlimited Ride Photos)</label>
+            </p>
+        </fieldset>
+
+        <fieldset> <!-- Delivery -->
+            <legend>Delivery</legend>
+            <p>
+                <label for="delivery-date">Delivery Date:</label>
+                <input type="date" id="delivery-date" name="delivery-date">
+            </p>
+            <p>Delivery Method:</p>
+            <p>
+                <input type="radio" id="email-delivery" name="delivery-method" value="email-delivery">
+                <label for="email-delivery">Email</label>
+            </p>
+            <p>
+                <input type="radio" id="sms-delivery" name="delivery-method" value="sms-delivery">
+                <label for="sms-delivery">SMS / Text Message</label>
+            </p>
+            <p>
+                <input type="radio" id="app-delivery" name="delivery-method" value="app-delivery">
+                <label for="app-delivery">Mobile App</label>
+            </p>
+            <p>
+                <input type="radio" id="mail-delivery" name="delivery-method" value="mail-delivery">
+                <label for="mail-delivery">Physical Mail</label>
+            </p>
+            <p>
+                <input type="radio" id="will-call" name="delivery-method" value="will-call">
+                <label for="will-call">Will Call (Pick Up at Gate)</label>
+            </p>
+            <p>
+                <input type="radio" id="print-delivery" name="delivery-method" value="print-delivery">
+                <label for="print-delivery">Print at Home</label>
+            </p>
+        </fieldset>
+
+        <input type="submit" value="Order Ticket!">
+
+    </form>
+</main>
+
+<footer>
+    <p>&copy; June 14, 2026 - <a href="mailto:ey01676@georgiasouthern.edu">ey01676@georgiasouthern.edu</a></p>
+</footer>
+
+</div>
+</body>
+</html>

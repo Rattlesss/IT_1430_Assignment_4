@@ -1,0 +1,6 @@
+<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="10" width="300" height="180" rx="18" fill="#632846" stroke="#E08E1D" stroke-width="5"/>
+  <polygon points="160,47 165.88,64.91 184.73,64.97 169.51,76.09 175.28,94.03 160,83 144.72,94.03 150.49,76.09 135.27,64.97 154.12,64.91" fill="#E08E1D"/>
+  <text x="160" y="135" text-anchor="middle" font-family="'Trebuchet MS', Verdana, sans-serif" font-weight="bold" font-size="30" fill="#F5F0E6">SIX FLAGS</text>
+  <text x="160" y="163" text-anchor="middle" font-family="'Trebuchet MS', Verdana, sans-serif" font-weight="bold" font-size="13" letter-spacing="2" fill="#F2EAD8">OVER TEXAS</text>
+</svg>

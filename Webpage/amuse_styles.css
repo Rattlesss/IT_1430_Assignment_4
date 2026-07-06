@@ -1,0 +1,286 @@
+/* Yates | Due: June 28, 2026 | Assignment 3 */
+/* Green Status ; https://jigsaw.w3.org/css-validator/ */
+/* Webpage validates as CSS Level 3 + SVG */
+
+/*  ===== Reset page values ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Define variables ===== */
+:root {
+    /* Gradient colors — used in html background */
+    --sunset-orange: #E08E1D;
+    --sunset-red: #8B0000;
+    --sunset-wine: #632846;
+    --bluebonnet-blue: #3A4F8C;
+
+    /* Custom colors — used across structural elements, links, headings */
+    --plum: #5C2A3D;       /* header background, nav link background */
+    --indigo: #3B4A6B;     /* nav background */
+    --cream: #F2EAD8;      /* parchment-esque, used for main background */
+    --charcoal: #232733;   /* footer background, table borders */
+    --cotton: #F5F0E6;     /* off-white, used for text on dark sections */
+    --asphalt: #2B2B2B;    /* dark text, used on main */
+    --amber: #9C6B22;      /* h2 color, nav link border + hover background */
+    --teal: #2F6F57;       /* h3 color, related-links color */
+    --wheat: #EFE3C8;      /* table: odd row background */
+    --mist: #DCE3EA;       /* table: even row background */
+    --marigold: #F2C94C;   /* motto text, high contrast */
+}
+
+/* ===== Page background ===== */
+html {
+    background: linear-gradient(180deg, var(--sunset-orange) 0%, var(--sunset-red) 40%, var(--sunset-wine) 70%, var(--bluebonnet-blue) 100%);
+    min-height: 100vh;
+    font-family: 'Trebuchet MS', 'Verdana', sans-serif;
+}
+
+/* ===== Page layout ===== */
+#wrapper {
+    max-width: 1000px;
+    margin: 40px auto; /* outside */
+    padding: 30px; /* inside */
+    border: 10px solid var(--amber);
+    border-radius: 16px;
+    background-color: var(--cream);
+    overflow: hidden;
+}
+
+/* ===== Horizontal rule ===== */
+hr {
+    height: 6px;
+    background-color: var(--indigo);
+    border: none;
+    border-radius: 3px;
+    margin: 20px 0;
+}
+
+/* ===== Headings ===== */
+h2 {
+    color: var(--amber);
+    margin-bottom: 12px;
+}
+
+h3 {
+    color: var(--teal);
+}
+
+/* ===== Structural elements ===== */
+header {
+    padding: 20px;
+    background-color: var(--plum);
+    color: var(--marigold);
+    text-align: center;
+    border: 6px solid var(--amber);
+    border-bottom: none;
+    border-radius: 16px 16px 0 0;
+}
+
+header img {
+    max-width: 200px;
+    display: block;
+    margin: 0 auto 12px auto;
+}
+
+nav {
+    padding: 20px;
+    background-color: var(--indigo);
+    color: var(--cotton);
+    text-align: center;
+    border: 6px solid var(--amber);
+    border-top: none;
+    border-radius: 0 0 16px 16px;
+}
+
+main {
+    padding: 20px;
+    background-color: var(--cream);
+    color: var(--asphalt);
+}
+
+footer {
+    padding: 20px;
+    background-color: var(--charcoal);
+    color: var(--cotton);
+    text-align: center;
+}
+
+/* ===== Navigation links ===== */
+nav a {
+    display: inline-block;
+    color: var(--cotton);
+    background-color: var(--plum);
+    text-decoration: none;
+    padding: 8px 16px;
+    margin-right: 12px;
+    border: 2px solid var(--amber);
+    border-radius: 10px;
+}
+
+nav a:last-child {
+    margin-right: 0;
+}
+
+nav a:hover {
+    background-color: var(--amber);
+    color: var(--charcoal);
+}
+
+/* ===== Hyperlink colors ===== */
+footer a {
+    color: var(--amber);
+}
+
+#related-park-news a {
+    color: var(--teal);
+}
+
+/* ===== Lists ===== */
+li {
+    margin-bottom: 8px;
+}
+
+#related-park-news ul {
+    list-style-type: square;
+}
+
+/* ===== Table (info.html) ===== */
+table {
+    border: 3px solid var(--charcoal);
+    border-collapse: collapse;
+    margin: 20px auto;
+    width: 70%;
+}
+
+th, td {
+    border: 1px solid var(--charcoal);
+    padding: 12px;
+    text-align: center;
+}
+
+thead th {
+    background-color: var(--indigo);
+    color: var(--cotton);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: var(--wheat);
+    color: var(--asphalt);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--mist);
+    color: var(--indigo);
+}
+
+caption {
+    text-align: right;
+    padding: 10px;
+    color: var(--teal);
+    font-style: italic;
+}
+
+/* ===== Ride images and captions (rides.html) ===== */
+article {
+    overflow: auto; /*clearfix: contains the floated figure*/
+    margin-bottom: 20px;
+}
+
+article h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+article hr {
+    clear: both; /* drops <hr> below the floated figure */
+}
+
+.rides-intro {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+figure {
+    float: left;
+    margin: 0 20px 20px 0;
+    max-width: 280px;
+}
+
+figure img {
+    width: 100%;
+    display: block;
+    border: 4px solid var(--amber);
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+figcaption {
+    margin-top: 6px;
+    font-size: 0.75rem;
+    font-style: italic;
+    color: var(--asphalt);
+}
+
+/* ===== Forms (order.html) ===== */
+.order-heading {
+    text-align: center;
+}
+
+form {
+    background-color: var(--indigo);
+    padding: 30px;
+    max-width: 600px;
+    margin: 30px auto;
+    border-radius: 16px;
+}
+
+fieldset {
+    border: 5px solid var(--amber);
+    background-color: var(--wheat);
+    width: 90%;
+    margin: 0 auto 20px auto;
+    padding: 20px;
+}
+
+legend {
+    border: 2px solid var(--amber);
+    background-color: var(--plum);
+    color: var(--cotton);
+    padding: 4px 12px;
+    border-radius: 8px;
+}
+
+fieldset p {
+    margin-top: 12px; /* spaces out every row in the fieldset */
+}
+
+fieldset label {
+    font-weight: bold;
+}
+
+fieldset input[type="text"],
+fieldset input[type="email"],
+fieldset input[type="tel"],
+fieldset input[type="number"],
+fieldset input[type="date"],
+fieldset select {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    padding: 6px;
+    margin-top: 4px;
+}
+
+input[type="submit"] {
+    display: block;
+    margin: 20px auto 0 auto; /* centers the button below the fieldsets */
+    padding: 10px 30px;
+    background-color: var(--plum);
+    color: var(--cotton);
+    border: 4px solid var(--amber);
+    border-radius: 8px;
+    font-weight: bold;
+}
