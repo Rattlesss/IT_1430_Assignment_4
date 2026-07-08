@@ -83,5 +83,20 @@ function showRides() {
         "../reference-Files/Shockwave_medium.jpg"
     ];
 
+    // Build and write ride HTML to the page using a loop
+    var output = "";
+
+    for (var i =0; i < rideNames.length; i++) {
+        output += "<article>" +
+            "<figure>" +
+            "<img src='" + rideImages[i] + "' alt='photo of " + rideNames[i] + " at Six Flags over Texas'>" +
+            "</figure>" +
+            "<h3>" + rideNames[i] + "</h3>" +
+            "<p>" + rideDescriptions[i] + "</p>" +
+            "<hr>" +
+            "</article>";
+    }
+
+    document.getElementById("rides-output").innerHTML = output;
 
 }
