@@ -1,7 +1,5 @@
 // Yates | Due July 12, 2026 | Assignment 4
 
-
-
 // ===== orderTics() =====
 // Called when the order form is submitted
 // Displays a fixed price alert and prevents form navigation
@@ -16,7 +14,7 @@ function orderTics() {
 // Displays the ride's ID and name in an alert
 
 function rideInfo(id, name) {
-    alert("You clicked on the ride with the ID of: " + id + " and name of: " + name)
+    alert("You clicked on the ride with the ID of: " + id + " and name of: " + name);
 }
 
 // ===== showRides() =====
@@ -86,7 +84,7 @@ function showRides() {
     // Build and write ride HTML to the page using a loop
     var output = "";
 
-    for (var i =0; i < rideNames.length; i++) {
+    for (var i = 0; i < rideNames.length; i++) {
         output += "<article>" +
             "<figure>" +
             "<img src='" + rideImages[i] + "' alt='photo of " + rideNames[i] + " at Six Flags over Texas'>" +
